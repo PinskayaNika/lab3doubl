@@ -25,7 +25,7 @@
         <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="76">
-              <caret line="4" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -46,6 +46,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/lab3/pom.xml" />
+        <option value="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java" />
       </list>
     </option>
   </component>
@@ -60,7 +61,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="x" value="706" />
     <option name="y" value="25" />
     <option name="width" value="1193" />
@@ -197,7 +198,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="706" y="25" width="1193" height="1064" extended-state="0" />
+    <frame x="706" y="25" width="1193" height="1064" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" />
@@ -243,7 +244,7 @@
     <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
         </state>
       </provider>
     </entry>
