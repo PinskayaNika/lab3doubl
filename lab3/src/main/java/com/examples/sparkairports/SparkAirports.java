@@ -15,7 +15,7 @@ public class SparkAirports {
         //JavaSparkContext.textFile
 
 
-        final Broadcast<Map<String, AirportData>> airportsBroadcasted =
-                sc.broadcast(stringAirportDataMap);
+       // final Broadcast<Map<String, AirportData>> airportsBroadcasted =
+         //       sc.broadcast(stringAirportDataMap);
     }
 }
