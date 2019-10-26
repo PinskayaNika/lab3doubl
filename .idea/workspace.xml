@@ -12,7 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lab3/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="95">
@@ -21,7 +21,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SparkAirports.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SparkAirports.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="152">
@@ -64,9 +64,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="666" />
-    <option name="y" value="216" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-67" />
+    <option name="y" value="286" />
     <option name="width" value="1185" />
     <option name="height" value="1059" />
   </component>
@@ -188,7 +188,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="666" y="216" width="1185" height="1059" extended-state="1" />
+    <frame x="-67" y="286" width="1185" height="1059" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -312,6 +312,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lab3/spark-examples/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/lab3/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
@@ -319,13 +326,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lab3/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
