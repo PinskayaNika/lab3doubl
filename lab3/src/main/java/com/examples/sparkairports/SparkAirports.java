@@ -9,8 +9,5 @@ public class SparkAirports {
         JavaSparkContext sc = new JavaSparkContext(conf);
 
 
-
-
-
     }
 }
