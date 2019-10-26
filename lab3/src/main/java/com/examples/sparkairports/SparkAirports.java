@@ -7,6 +7,7 @@ public class SparkAirports {
     public static void main(String[] args) throws Exception {
         SparkConf conf = new SparkConf().setAppName("lab3doubl");
         JavaSparkContext sc = new JavaSparkContext(conf);
+        
 
 
     }
