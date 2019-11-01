@@ -69,13 +69,18 @@
       </list>
     </option>
   </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>comb</find>
+    </findStrings>
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/lab3/AirportsFunctions.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab3/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab3/ScheduleFunctions.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/lab3/AirportsFunctions.java" />
       </list>
     </option>
   </component>

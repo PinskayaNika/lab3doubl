@@ -27,13 +27,13 @@ public class SparkAirports {
         JavaRDD<String> splittedAirport = airportFile.flatMap(s -> Arrays.stream(s.split(" ")).iterator());
 
         //Отображение слов в пару <Слово,1>
-        JavaPairRDD<String, Long> wordWithCountDelay = splittedDelay.mapToPair(s -> new Tuple2<>(s, 1)|);
-        JavaPairRDD<String, Long> wordWithCountAirport = splittedAirport.mapToPair(s -> new Tuple2<>(s, 1|));
+        JavaPairRDD<Integer, String> wordWithCountDelay = splittedDelay.mapToPair(s -> new Tuple2<>(s, 1)|);
+        JavaPairRDD<Integer, String> wordWithCountAirport = splittedAirport.mapToPair(s -> new Tuple2<>(Integer.parseInt(getAirportData(AIRPORT_ID_POS, s, true)), getAirportData(AIRPORT_NAME_POS, s, true)));
 
         //JavaSparkContext.textFile
 
 
-        final Broadcast<Map<String, AirportData>> airportsBroadcasted =
+        final Broadcast<Map<Integer, String>> airportsBroadcasted =
                    AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
     }
 }
