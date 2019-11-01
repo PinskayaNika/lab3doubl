@@ -28,7 +28,7 @@ public class SparkAirports {
 
         //Отображение слов в пару <Слово,1>
         JavaPairRDD<String, Long> wordWithCountDelay = splittedDelay.mapToPair(s -> new Tuple2<>(s, 1)|);
-        JavaPairRDD<String, Long>
+        JavaPairRDD<String, Long> wordWithCountAirport = splittedAirport.mapToPair(s -> new Tuple2<>(s, 1|));
 
         //JavaSparkContext.textFile
 
