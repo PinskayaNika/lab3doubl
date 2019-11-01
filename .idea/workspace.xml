@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75bf89de-909d-41e5-a537-1fe582542d35" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/FlightFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/FlightFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java" afterDir="false" />
-    </list>
+    <list default="true" id="75bf89de-909d-41e5-a537-1fe582542d35" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/lab3/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,7 +24,7 @@
       <file leaf-file-name="SparkAirports.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="212">
               <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -95,7 +92,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="25" />
     <option name="width" value="954" />
     <option name="height" value="1059" />
@@ -232,7 +229,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="954" height="1059" extended-state="0" />
+    <frame x="0" y="25" width="954" height="1059" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -411,7 +408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="212">
           <caret line="50" lean-forward="true" selection-start-line="50" selection-end-line="50" />
           <folding>
             <element signature="imports" expanded="true" />
