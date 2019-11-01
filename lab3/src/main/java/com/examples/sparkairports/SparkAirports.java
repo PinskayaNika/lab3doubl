@@ -6,14 +6,29 @@ import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 import org.apache.spark.broadcast.Broadcast;
+import scala.Int;
 import scala.Tuple2;
 
+import java.sql.SQLTransactionRollbackException;
 import java.util.Arrays;
 import java.util.Map;
 
 public class SparkAirports {
     private static final int AIRPORT_ID_POS = 0;
     private static final int AIRPORT_NAME_POS = 1;
+
+
+    private static JavaRDD<String> mapAirportsID(JavaPairRDD<Pair<Integer, Integer>, String> flights, final Broadcast<Map<Integer, String>> airportsBroadcasted) {
+        return flights.map(data -> {
+            int airportID1 = data._1.getKey();
+            int airportID2 = data._1.getValue();
+            String info = data._2;
+            String airportName1 = airportsBroadcasted.getValue().get(airportID1);
+            String airportName2 = airportsBroadcasted.getValue().get(airportID2);
+            info = airportID1 + "(" + airportName1 + ") -> " + airportID2 + "(" +airportName2 + ") " + info;
+            return info;
+        });
+    }
 
     public static void main(String[] args) throws Exception {
         //Инициализация приложения
@@ -44,6 +59,8 @@ public class SparkAirports {
         final Broadcast<Map<Integer, String>> airportsBroadcasted =
                 sc.broadcast(wordWithCountAirport.collectAsMap());
 
-        JavaPairRDD<Pair<Integer, String>> flightsHandler = FlightFunctions.handleFlight(flightFile);
+        JavaPairRDD<Pair<Integer, Integer>, String> flightsHandler = FlightFunctions.handleFlight(flightFile);
+        JavaRDD<String> output = mapAirportsID(flightsHandler, airportsBroadcasted);
+        output.saveAsTextFile(args[0]);
     }
 }
