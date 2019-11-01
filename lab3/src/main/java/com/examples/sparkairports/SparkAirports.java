@@ -38,7 +38,9 @@ public class SparkAirports {
 
         final Broadcast<Map<Integer, String>> airportsBroadcasted =
                    AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
+//        final Broadcast<Map<Integer, String>> airportsBroadcasted =
+//                AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
         final Broadcast<Map<Integer, String>> airportsBroadcasted =
-                AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
+                sc.broadcast(stringAirportDataMap);
     }
 }
