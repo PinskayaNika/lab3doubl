@@ -17,12 +17,13 @@ public class AirportFunctions {
         if (isAirport) {
             return getFromAirport(pos, s);
         } else {
-            return FlightFunctions.getFromFlights(pos, s);
+            return FlightFunctions.getFromFlight(pos, s);
         }
     }
 
 
     private static String getFromAirport(int pos, String s) {
-        String 
+        String strsub = s.split(",", 2)[pos];
+        return strsub.substring(1, strsub.length() - 1);
     }
 }
