@@ -1,5 +1,6 @@
 package com.examples.sparkairports;
 
+import javafx.util.Pair;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -21,12 +22,12 @@ public class SparkAirports {
 
 
         //Загрузка данных
-        JavaRDD<String> delayFile = sc.textFile("664600583_T_ONTIME_sample.csv");
+        JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
         JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
 
 
         //Разбиение строки на слова
-        //JavaRDD<String> splittedDelay = delayFile.flatMap(s -> Arrays.stream(s.split(" ")).iterator());
+        //JavaRDD<String> splittedDelay = flightFile.flatMap(s -> Arrays.stream(s.split(" ")).iterator());
         JavaRDD<String> splittedAirport = airportFile.flatMap(s -> Arrays.stream(s.split(" ")).iterator());
 
         //Отображение слов в пару <Слово,1>
@@ -36,11 +37,13 @@ public class SparkAirports {
         //JavaSparkContext.textFile
 
 
-        final Broadcast<Map<Integer, String>> airportsBroadcasted =
-                   AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
+       // final Broadcast<Map<Integer, String>> airportsBroadcasted =
+       //            AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
 //        final Broadcast<Map<Integer, String>> airportsBroadcasted =
 //                AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
         final Broadcast<Map<Integer, String>> airportsBroadcasted =
-                sc.broadcast(stringAirportDataMap);
+                sc.broadcast(wordWithCountAirport.collectAsMap());
+
+        JavaPairRDD<Pair<Integer, String>> flightsHandler = FlightFunctions.handleFlight(flightFile);
     }
 }

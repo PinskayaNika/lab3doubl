@@ -8,10 +8,10 @@ import org.apache.spark.broadcast.Broadcast;
 import java.util.Map;
 
 public class AirportFunctions {
-    public static Broadcast<Map<Integer, String>> getAirportBroadcasted(JavaSparkContext sc, JavaRDD<String> airport) {
+    //public static Broadcast<Map<Integer, String>> getAirportBroadcasted(JavaSparkContext sc, JavaRDD<String> airport) {
         //JavaPairRDD<Integer, String> airportPair = airport.mapToPair(s-)
 
-    }
+    //}
 
     public static String getAirportData(int pos, String s, boolean isAirport) {
         if (isAirport) {
