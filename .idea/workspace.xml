@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75bf89de-909d-41e5-a537-1fe582542d35" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/AirportFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/AirportFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java" afterDir="false" />
-    </list>
+    <list default="true" id="75bf89de-909d-41e5-a537-1fe582542d35" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/lab3/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -27,8 +24,8 @@
       <file leaf-file-name="SparkAirports.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="511">
-              <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="112">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -409,8 +406,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="511">
-          <caret line="42" lean-forward="true" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="112">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
