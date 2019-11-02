@@ -89,11 +89,10 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="885" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="25" />
-    <option name="width" value="1035" />
-    <option name="height" value="1054" />
+    <option name="width" value="954" />
+    <option name="height" value="1059" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
