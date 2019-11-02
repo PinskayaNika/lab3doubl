@@ -65,11 +65,13 @@ public class SparkAirports {
         JavaRDD<String> flightFile = getDataFromFile(sc, "664600583_T_ONTIME_sample.csv");
         JavaRDD<String> airportFile = getDataFromFile(sc, "L_AIRPORT_ID.csv");
 
-        JavaPairRDD<Integer, String> wordWithCountAirport = airportFile.mapToPair(s -> new Tuple2<>(Integer.parseInt(AirportFunctions.getAirportData(AIRPORT_ID_POS, s, true)), AirportFunctions.getAirportData(AIRPORT_NAME_POS, s, true)));
+//        JavaPairRDD<Integer, String> wordWithCountAirport = airportFile.mapToPair(s -> new Tuple2<>(Integer.parseInt(AirportFunctions.getAirportData(AIRPORT_ID_POS, s, true)), AirportFunctions.getAirportData(AIRPORT_NAME_POS, s, true)));
+//
+//        final Broadcast<Map<Integer, String>> airportsBroadcasted =
+//                sc.broadcast(wordWithCountAirport.collectAsMap());
+//
 
-        final Broadcast<Map<Integer, String>> airportsBroadcasted =
-                sc.broadcast(wordWithCountAirport.collectAsMap());
-
+        final Broadcast<Map<Integer,String>> airportsBroadcasted = AirportFunctions.getAirportBroadcasted(sc,airportFile);
         JavaPairRDD<Pair<Integer, Integer>, String> flightsHandler = FlightFunctions.handleFlight(flightFile);
         JavaRDD<String> output31 = mapAirportsID(flightsHandler, airportsBroadcasted);
         output31.saveAsTextFile(args[0]);
