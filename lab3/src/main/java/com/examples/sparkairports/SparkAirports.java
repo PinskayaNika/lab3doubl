@@ -31,7 +31,9 @@ public class SparkAirports {
     }
 
     private static JavaRDD<String> getDataFromFile(JavaSparkContext sc, String path) {
-        JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
+        JavaRDD<String> data = sc.textFile(path).flatMap(s -> Arrays.stream(s.split(" ")).iterator());;
+        final String header = data.first();
+        return data.filter(line -> !line.equals(header));
     }
 
     public static void main(String[] args) throws Exception {
@@ -47,11 +49,10 @@ public class SparkAirports {
 
         //Разбиение строки на слова
         //JavaRDD<String> splittedDelay = flightFile.flatMap(s -> Arrays.stream(s.split(" ")).iterator());
-        JavaRDD<String> splittedAirport = airportFile.flatMap(s -> Arrays.stream(s.split(" ")).iterator());
+        //JavaRDD<String> splittedAirport = airportFile.flatMap(s -> Arrays.stream(s.split(" ")).iterator());
 
         //Отображение слов в пару <Слово,1>
        // JavaPairRDD<Integer, String> wordWithCountDelay = splittedDelay.mapToPair(s -> new Tuple2<>(s, 1)|);
-        JavaPairRDD<Integer, String> wordWithCountAirport = splittedAirport.mapToPair(s -> new Tuple2<>(Integer.parseInt(AirportFunctions.getAirportData(AIRPORT_ID_POS, s, true)), AirportFunctions.getAirportData(AIRPORT_NAME_POS, s, true)));
 
         //JavaSparkContext.textFile
 
@@ -61,8 +62,10 @@ public class SparkAirports {
 //        final Broadcast<Map<Integer, String>> airportsBroadcasted =
 //                AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
 
-        JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
-        JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
+        JavaRDD<String> flightFile = getDataFromFile(sc, "664600583_T_ONTIME_sample.csv");
+        JavaRDD<String> airportFile = getDataFromFile(sc, "L_AIRPORT_ID.csv");
+
+        JavaPairRDD<Integer, String> wordWithCountAirport = airportFile.mapToPair(s -> new Tuple2<>(Integer.parseInt(AirportFunctions.getAirportData(AIRPORT_ID_POS, s, true)), AirportFunctions.getAirportData(AIRPORT_NAME_POS, s, true)));
 
         final Broadcast<Map<Integer, String>> airportsBroadcasted =
                 sc.broadcast(wordWithCountAirport.collectAsMap());
