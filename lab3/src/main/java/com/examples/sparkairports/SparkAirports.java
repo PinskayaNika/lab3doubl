@@ -97,7 +97,7 @@ public class SparkAirports {
         final String header = data.first();
         return data.filter(line -> !line.equals(header));
     }
-    
+
 //в методе map преобразуем итоговый RDD содержащий статистические
 //данные — обогащаем его именами аэропортов, обращаясь внутри
 //функций к объекту airportsBroadcasted.value()

@@ -45,6 +45,8 @@ public class FlightFunctions {
         return flights.filter(pair -> pair._2[MAX_DELAY_POS] >=0);
     }
 
+    //помощью функции reduce или аналогичных расчитываем максимальное
+    //время опоздания, процент опоздавших+отмененных рейсов
     private static JavaPairRDD<Pair<Integer, Integer>, float[]> reduceFlights(JavaPairRDD<Pair<Integer, Integer>, float[]> flights) {
         return flights.reduceByKey((flightsInfo1, flightsInfo2) -> {
             flightsInfo1[NUMBER_OF_CANCELLED_POS] = flightsInfo1[NUMBER_OF_CANCELLED_POS] + flightsInfo1[IS_CANCELLED_POS] + flightsInfo2[NUMBER_OF_CANCELLED_POS] + flightsInfo2[IS_CANCELLED_POS];
