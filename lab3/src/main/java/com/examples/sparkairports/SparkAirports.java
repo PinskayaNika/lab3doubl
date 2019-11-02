@@ -68,7 +68,7 @@ public class SparkAirports {
                 sc.broadcast(wordWithCountAirport.collectAsMap());
 
         JavaPairRDD<Pair<Integer, Integer>, String> flightsHandler = FlightFunctions.handleFlight(flightFile);
-        JavaRDD<String> output = mapAirportsID(flightsHandler, airportsBroadcasted);
-        output.saveAsTextFile(args[0]);
+        JavaRDD<String> output31 = mapAirportsID(flightsHandler, airportsBroadcasted);
+        output31.saveAsTextFile(args[0]);
     }
 }
