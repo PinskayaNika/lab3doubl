@@ -13,7 +13,7 @@ public class AirportFunctions {
     private static final int AIRPORT_NAME_POS = 1;
 
     public static Broadcast<Map<Integer, String>> getAirportBroadcasted(JavaSparkContext sc, JavaRDD<String> airport) {
-        //Отображение слов в пару <Слово,1>
+        //ОПреобразуем RDD в RDD пару ключ значение с помощью метода mapToPair
         //В качестве ключа для пары аэропортов используем класс Tuple2
         JavaPairRDD<Integer, String> airportPair = airport.mapToPair(s -> new Tuple2<>(Integer.parseInt(getAirportData(AIRPORT_ID_POS, s, true)), getAirportData(AIRPORT_NAME_POS, s, true)));
         Map<Integer, String> airportsMap = airportPair.collectAsMap();
