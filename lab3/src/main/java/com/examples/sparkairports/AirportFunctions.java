@@ -13,9 +13,11 @@ public class AirportFunctions {
     private static final int AIRPORT_NAME_POS = 1;
 
     public static Broadcast<Map<Integer, String>> getAirportBroadcasted(JavaSparkContext sc, JavaRDD<String> airport) {
-        //ОПреобразуем RDD в RDD пару ключ значение с помощью метода mapToPair
+        //Преобразуем RDD в RDD пару ключ значение с помощью метода mapToPair
         //В качестве ключа для пары аэропортов используем класс Tuple2
         JavaPairRDD<Integer, String> airportPair = airport.mapToPair(s -> new Tuple2<>(Integer.parseInt(getAirportData(AIRPORT_ID_POS, s, true)), getAirportData(AIRPORT_NAME_POS, s, true)));
+        //Для связывания с таблицей аэропортов — предварительно
+        //выкачиваем список аэропортов в главную функцию с помощью метода collectAsMap
         Map<Integer, String> airportsMap = airportPair.collectAsMap();
                 return sc.broadcast(airportsMap);
 
