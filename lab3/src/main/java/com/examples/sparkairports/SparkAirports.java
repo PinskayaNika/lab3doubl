@@ -117,6 +117,7 @@ public class SparkAirports {
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> airportFile = getDataFromFile(sc, "L_AIRPORT_ID.csv");
         JavaRDD<String> flightFile = getDataFromFile(sc, "664600583_T_ONTIME_sample.csv");
+        //Создаем в основном методе main переменную broadcast
         final Broadcast<Map<Integer,String>> airportsBroadcasted = AirportFunctions.getAirportBroadcasted(sc,airportFile);
         JavaPairRDD<Pair<Integer, Integer>, String> flightHandler = FlightFunctions.handleFlight(flightFile);
         JavaRDD<String> output32 = mapAirportsIDs(flightHandler, airportsBroadcasted);
