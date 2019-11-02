@@ -97,7 +97,7 @@ public class SparkAirports {
         final String header = data.first();
         return data.filter(line -> !line.equals(header));
     }
-
+//
     private static JavaRDD<String> mapAirportsIDs(JavaPairRDD<Pair<Integer, Integer>, String> schedule, final Broadcast<Map<Integer,String>> airportsBroadcasted){
         return schedule.map(data -> {
             int airportID1 = data._1.getKey();
