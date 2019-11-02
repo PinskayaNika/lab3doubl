@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="75bf89de-909d-41e5-a537-1fe582542d35" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/AirportFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/AirportFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/FlightFunctions.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/FlightFunctions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java" beforeDir="false" afterPath="$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java" afterDir="false" />
-    </list>
+    <list default="true" id="75bf89de-909d-41e5-a537-1fe582542d35" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/lab3/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,8 +24,11 @@
       <file leaf-file-name="SparkAirports.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="90" column="27" selection-end-line="123" />
+            <state relative-caret-position="217">
+              <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -101,57 +100,7 @@
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="lab3doubl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3doubl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3doubl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3doubl" type="462c0819:PsiDirectoryNode" />
-              <item name="lab3" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3doubl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3doubl" type="462c0819:PsiDirectoryNode" />
-              <item name="lab3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3doubl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3doubl" type="462c0819:PsiDirectoryNode" />
-              <item name="lab3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3doubl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3doubl" type="462c0819:PsiDirectoryNode" />
-              <item name="lab3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lab3doubl" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lab3doubl" type="462c0819:PsiDirectoryNode" />
-              <item name="lab3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="sparkairports" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="AndroidView" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
@@ -286,6 +235,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1710">
           <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -320,6 +272,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="34" lean-forward="true" selection-start-line="2" selection-start-column="34" selection-end-line="2" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -437,8 +392,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="659">
-          <caret line="90" column="27" selection-end-line="123" />
+        <state relative-caret-position="217">
+          <caret line="135" lean-forward="true" selection-start-line="135" selection-end-line="135" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
