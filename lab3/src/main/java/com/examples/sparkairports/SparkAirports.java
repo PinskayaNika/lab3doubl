@@ -30,6 +30,10 @@ public class SparkAirports {
         });
     }
 
+    private static JavaRDD<String> getDataFromFile(JavaSparkContext sc, String path) {
+        JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
+    }
+
     public static void main(String[] args) throws Exception {
         //Инициализация приложения
         SparkConf conf = new SparkConf().setAppName("lab3doubl");
@@ -37,8 +41,8 @@ public class SparkAirports {
 
 
         //Загрузка данных
-        JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
-        JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
+        //JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
+        //JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
 
 
         //Разбиение строки на слова
@@ -56,6 +60,10 @@ public class SparkAirports {
        //            AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
 //        final Broadcast<Map<Integer, String>> airportsBroadcasted =
 //                AirportFunctions.getAirportBroadcasted(sc, splittedAirport);
+
+        JavaRDD<String> flightFile = sc.textFile("664600583_T_ONTIME_sample.csv");
+        JavaRDD<String> airportFile = sc.textFile("L_AIRPORT_ID.csv");
+
         final Broadcast<Map<Integer, String>> airportsBroadcasted =
                 sc.broadcast(wordWithCountAirport.collectAsMap());
 
