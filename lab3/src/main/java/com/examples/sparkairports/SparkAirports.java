@@ -91,6 +91,8 @@ import java.util.*;
 public class SparkAirports {
 
     private static JavaRDD<String> getDataFromFile(JavaSparkContext sc, String path){
+        //Загрузка данных
+        //Разбиение строки на слова
         JavaRDD<String> data = sc.textFile(path).flatMap(s -> Arrays.stream(s.split("\t")).iterator());
         final String header = data.first();
         return data.filter(line -> !line.equals(header));
@@ -110,6 +112,7 @@ public class SparkAirports {
 
 
     public static void main(String[] args){
+        //Инициализация приложения
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
         JavaRDD<String> airportFile = getDataFromFile(sc, "L_AIRPORT_ID.csv");
