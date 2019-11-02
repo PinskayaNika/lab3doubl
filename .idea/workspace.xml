@@ -24,7 +24,7 @@
       <file leaf-file-name="SparkAirports.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
+            <state relative-caret-position="187">
               <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -92,7 +92,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="1">
     <option name="y" value="25" />
     <option name="width" value="954" />
     <option name="height" value="1059" />
@@ -229,7 +229,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="25" width="954" height="1059" extended-state="0" />
+    <frame x="0" y="25" width="954" height="1059" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -237,7 +237,7 @@
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009124" side_tool="true" visible="true" weight="0.33124346" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5009124" side_tool="true" weight="0.33124346" />
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.20483193" />
       <window_info anchor="bottom" id="Version Control" order="7" sideWeight="0.4990876" weight="0.3291536" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -408,7 +408,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lab3/src/main/java/com/examples/sparkairports/SparkAirports.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
+        <state relative-caret-position="187">
           <caret line="35" column="57" lean-forward="true" selection-start-line="35" selection-start-column="57" selection-end-line="35" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
