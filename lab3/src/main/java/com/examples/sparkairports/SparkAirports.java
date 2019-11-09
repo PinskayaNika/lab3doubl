@@ -96,6 +96,7 @@ public class SparkAirports {
     private static JavaRDD<String> getDataFromFile(JavaSparkContext sc, String path){
         //Загрузка данных
         //Разбиение строки на слова
+        //.textFile – загружает файл из hdfs. Каждая запись RDD – строка.
         JavaRDD<String> data = sc.textFile(path).flatMap(s -> Arrays.stream(s.split("\t")).iterator());
         final String header = data.first();
         return data.filter(line -> !line.equals(header));  //пропускаем первую строку заголовков
