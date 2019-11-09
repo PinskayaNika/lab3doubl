@@ -99,6 +99,7 @@ public class SparkAirports {
         //.textFile – загружает файл из hdfs. Каждая запись RDD – строка.
         JavaRDD<String> data = sc.textFile(path).flatMap(s -> Arrays.stream(s.split("\t")).iterator());
         final String header = data.first();
+        //Filter – фильтрация записей RDD
         return data.filter(line -> !line.equals(header));  //пропускаем первую строку заголовков
     }
 
