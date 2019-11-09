@@ -28,7 +28,10 @@ class FlightFunctions {
 
     private static JavaPairRDD<Pair<Integer, Integer>, float[]> createFlightsPair (JavaRDD<String> flights) {
         return flights.mapToPair(s -> {
-            Pair<Integer, Integer> airportsID = new Pair<>(Integer.parseInt(AirportFunctions.getAirportData(AIRPORT_ID_FROM_POS, s, false)), Integer.parseInt((AirportFunctions.getAirportData(AIRPORT_ID_TO_POS, s, false))));
+            Pair<Integer, Integer> airportsID = new Pair<>(
+                    Integer.parseInt(AirportFunctions.getAirportData(AIRPORT_ID_FROM_POS, s, false)),
+                    Integer.parseInt((AirportFunctions.getAirportData(AIRPORT_ID_TO_POS, s, false)))
+            );
             float[] delayData = new float[] {0, 0, 0, 0, 1};
             if(AirportFunctions.getAirportData(DELAY_FLIGHT_POS, s, false).length() > 0) {
                 delayData[MAX_DELAY_POS] = Float.parseFloat(AirportFunctions.getAirportData(DELAY_FLIGHT_POS, s, false));
