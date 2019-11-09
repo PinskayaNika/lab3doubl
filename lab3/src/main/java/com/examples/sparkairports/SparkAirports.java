@@ -90,12 +90,15 @@ import java.util.*;
 
 public class SparkAirports {
 
+    private static final String AIRPORT_ID_CSV = "L_AIRPORT_ID.csv";
+    private static final String FLIGHT_CSV = "664600583_T_ONTIME_sample.csv";
+
     private static JavaRDD<String> getDataFromFile(JavaSparkContext sc, String path){
         //Загрузка данных
         //Разбиение строки на слова
         JavaRDD<String> data = sc.textFile(path).flatMap(s -> Arrays.stream(s.split("\t")).iterator());
         final String header = data.first();
-        return data.filter(line -> !line.equals(header));
+        return data.filter(line -> !line.equals(header));  //пропускаем первую строку заголовков
     }
 
 //в методе map преобразуем итоговый RDD содержащий статистические
@@ -118,13 +121,13 @@ public class SparkAirports {
         //Инициализация приложения
         SparkConf conf = new SparkConf().setAppName("lab3");
         JavaSparkContext sc = new JavaSparkContext(conf);
-        JavaRDD<String> airportFile = getDataFromFile(sc, "L_AIRPORT_ID.csv");
-        JavaRDD<String> flightFile = getDataFromFile(sc, "664600583_T_ONTIME_sample.csv");
+        JavaRDD<String> airportFile = getDataFromFile(sc, AIRPORT_ID_CSV);
+        JavaRDD<String> flightFile = getDataFromFile(sc, FLIGHT_CSV);
         //Создаем в основном методе main переменную broadcast
         final Broadcast<Map<Integer,String>> airportsBroadcasted = AirportFunctions.getAirportBroadcasted(sc,airportFile);
         JavaPairRDD<Pair<Integer, Integer>, String> flightHandler = FlightFunctions.handleFlight(flightFile);
-        JavaRDD<String> output32 = mapAirportsIDs(flightHandler, airportsBroadcasted);
-        output32.saveAsTextFile(args[0]);
+        JavaRDD<String> output = mapAirportsIDs(flightHandler, airportsBroadcasted);
+        output.saveAsTextFile(args[0]);
     }
 }
 
