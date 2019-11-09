@@ -97,6 +97,7 @@ public class SparkAirports {
         //Загрузка данных
         //Разбиение строки на слова
         //.textFile – загружает файл из hdfs. Каждая запись RDD – строка.
+        //FlatMap – отображение элемента RDD в несколько элементов
         JavaRDD<String> data = sc.textFile(path).flatMap(s -> Arrays.stream(s.split("\t")).iterator());
         final String header = data.first();
         //Filter – фильтрация записей RDD
